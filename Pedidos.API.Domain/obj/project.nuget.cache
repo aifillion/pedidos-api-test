@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KppJJ6yMLtTUE4XtRzrAzvhnTI7pXfw7g3M1liafIIDQZtnuJMoClJwcqRlwNZX9YlwZKZo8m5DLfnv1cYaCWA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ailin\\source\\repos\\Pedidos.API\\Pedidos.API.Domain\\Pedidos.API.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ailin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ailin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

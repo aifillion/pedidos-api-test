@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Pedidos.WorkerService-2f462acb-9522-43ab-9325-52b32c5f2a56</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="2.2.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pedidos.API.Application\Pedidos.API.Application.csproj" />
+    <ProjectReference Include="..\Pedidos.API.Domain\Pedidos.API.Domain.csproj" />
+    <ProjectReference Include="..\Pedidos.API.Infra\Pedidos.API.Infra.csproj" />
+  </ItemGroup>
+</Project>
