@@ -50,12 +50,12 @@ namespace Pedidos.API.Controllers
             var queryResponse = await _mediator.Send(new GetPedidoQuery(id));
 
             timer.Stop();
-            ApmMetrics.RecordRequestMetrics("GetPedido", timer.ElapsedMilliseconds);
+            //ApmMetrics.RecordRequestMetrics("GetPedido", timer.ElapsedMilliseconds);
 
             if (queryResponse == null)
             {
                 _logger.LogInformation("Pedido no encontrado: {Id}", id);
-                ApmMetrics.RecordError();
+                //ApmMetrics.RecordError();
                 return NotFound("Pedido no encontrado."); 
             }
 
@@ -85,7 +85,7 @@ namespace Pedidos.API.Controllers
             if (!result.IsValid)
             {
                 _logger.LogInformation("Parámetros inválidos (deben ser númericos)");
-                ApmMetrics.RecordError();
+                //ApmMetrics.RecordError();
                 return BadRequest(result.Errors);
             }
 
@@ -97,7 +97,7 @@ namespace Pedidos.API.Controllers
             await PublicarEventoPedidoEnKafka(commandResponse);
 
             timer.Stop();
-            ApmMetrics.RecordRequestMetrics("SavePedido", timer.ElapsedMilliseconds);
+            //ApmMetrics.RecordRequestMetrics("SavePedido", timer.ElapsedMilliseconds);
 
             _logger.LogInformation("Pedido creado: {Id}", commandResponse.Id);
             return Created(locationUrl, null);
